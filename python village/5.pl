@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 my $index;
 open FILE, "rosalind_ini5.txt";
 
