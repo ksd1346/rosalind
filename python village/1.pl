@@ -1,2 +1,1 @@
-use v6;
-run <<python -c "import this">>
+system("python3 -c 'import this'");
