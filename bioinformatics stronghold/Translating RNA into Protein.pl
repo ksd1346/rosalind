@@ -1,5 +1,6 @@
 use strict;
-use feature "say";
+use warnings;
+
 
 =pot
 codon table
@@ -76,6 +77,8 @@ while (my $line = <CODON>) {
     $split[0] =~ s/T/U/g;
     $codon{$split[0]} = $split[1];
 }
+
+close CODON;
 
 my $strna = "AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA";
 
