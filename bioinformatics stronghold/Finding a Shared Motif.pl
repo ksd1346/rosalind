@@ -6,7 +6,6 @@ open F, "rosalind_lcsm.txt";
 my $id;
 my %seq;
 my @motif;
-my %seen;
 
 while (<F>) {
     chomp;
