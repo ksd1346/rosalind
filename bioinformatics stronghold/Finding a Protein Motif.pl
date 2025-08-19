@@ -2,15 +2,15 @@ use strict;
 use warnings;
 use LWP::Simple;
 
-open FILE, "rosalind_mprt (1).txt";
+open FILE, "rosalind_mprt.txt";
 
 while (<FILE>) {
   my @index;
   chomp;
   s/\r//g;
   my $id = $_;
-  s/_.+//g;
-  my $protein = get "http://www.uniprot.org/uniprot/$_.fasta";
+  (my $url = $_) =~ s/_.+//g;
+  my $protein = get "http://www.uniprot.org/uniprot/$url.fasta";
   $protein =~ s/^>.+\n//g;
   chomp $protein;
   $protein =~ s/\n//g;
