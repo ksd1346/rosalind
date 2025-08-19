@@ -1,4 +1,4 @@
-# practice
+# rosalind
 hello
 
-practice rosalind problems
+solving rosalind problems
