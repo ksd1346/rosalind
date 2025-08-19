@@ -1,5 +1,6 @@
-use v6;
+use strict;
+use warnings;
 
-my $s = "GATGGAACTTGACTACGTAAATT";
-
-.trans("T" => "U").say given $s;
+my $seq = "GATGGAACTTGACTACGTAAATT";
+(my $rna = $seq) =~ s/T/U/;
+print $rna;
