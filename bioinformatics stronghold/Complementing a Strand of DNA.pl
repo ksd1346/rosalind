@@ -1,3 +1,6 @@
-use v6;
-my $s = "AAAACCCGGT";
-.flip.trans("ATGC" => "TACG").say given $s
+use strict;
+use warnings;
+
+my $seq = "AAAACCCGGT";
+(my $strand = reverse $seq) =~ tr/ATGC/TACG/;
+print $strand;
